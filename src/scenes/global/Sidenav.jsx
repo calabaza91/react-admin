@@ -22,14 +22,18 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 	return (
 		<MenuItem
 			active={selected === title}
-			style={{
-				color: colors.grey[100],
-			}}
+			style={{ color: colors.grey[100],}}
 			onClick={() => setSelected(title)}
 			icon={icon}
 		>
-			<Typography>{title}</Typography>
-			<Link to={to} />
+			<Typography>
+				<Link to={to} style={{
+					textDecoration:"none",
+					color: "inherit"
+				}}> 
+					{title}
+				</Link>
+			</Typography>
 		</MenuItem>
 	)
 }
