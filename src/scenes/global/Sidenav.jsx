@@ -60,7 +60,8 @@ const Sidenav = () => {
 				}
 			}}
 		>
-			<Sidebar collapsed={isCollapsed}>
+			<Sidebar collapsed={isCollapsed} style={{ height: "100vh" }}
+			>
 				<Menu>
 					{/* LOGO AND MENU ICON */}
 					<MenuItem
@@ -119,7 +120,7 @@ const Sidenav = () => {
 						</Box>
 					)}
 
-					{/* Nav Items */}
+					{/* NAV ITEMS */}
 					<Box paddingLeft={isCollapsed ? undefined : "10%"}>
 						<Item 
 							title="Dashboard"
